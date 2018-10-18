@@ -229,6 +229,14 @@ import './styles.scss'
 - You will see a different colour based on the variant set for you
 - In order to test your luck, try clearing your cookies and see if the background colour changes or not
 
+## Release (to user repo)
+
+```bash
+npm pack # ?
+git tag v0.5.3-mod
+git push origin --tags
+```
+
 ## License
 
 [MIT License](./LICENSE) - Alibaba Travels Co
