@@ -6,6 +6,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/alibaba-aero/nuxt-google-optimize.svg?style=flat-square)](https://codecov.io/gh/alibaba-aero/nuxt-google-optimize)
 [![Dependencies](https://david-dm.org/alibaba-aero/nuxt-google-optimize/status.svg?style=flat-square)](https://david-dm.org/alibaba-aero/nuxt-google-optimize)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+[![CircleCI](https://circleci.com/gh/tw00/nuxt-google-optimize.svg?style=svg)](https://circleci.com/gh/tw00/nuxt-google-optimize)
 
 > SSR friendly Google Optimize module for Nuxt.js
 
