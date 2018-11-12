@@ -237,6 +237,10 @@ git tag v0.5.3-mod
 git push origin --tags
 ```
 
+## TODO (tw00)
+
+- Experiment might get changed by user, the cookie becomes invalid then
+
 ## License
 
 [MIT License](./LICENSE) - Alibaba Travels Co
