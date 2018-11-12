@@ -4,7 +4,7 @@ node_modules
 *.log*
 .nuxt
 .vscode
+.DS_STORE
 .DS_Store
 coverage
 dist
-backup
