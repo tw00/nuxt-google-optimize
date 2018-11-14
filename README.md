@@ -40,10 +40,22 @@ npm install nuxt-google-optimize --save
     'nuxt-google-optimize',
   ],
 
-  // Optional options
   googleOptimize: {
-    // experimentsDir: '~/experiments',
-    // maxAge: 60 * 60 * 24 * 7 // 1 Week
+    /* container Id required for async-hide */
+    containerId: 'GTM-XXXXXXX',
+
+    /*** Optional options: ***/
+
+    /* Disable cookies on server side */
+    disableServerCookies: true,
+
+    /* Directory of experiments */
+    experimentsDir: '~/experiments',
+
+    /* Max age after which experiments are disabled */
+    maxAge: 60 * 60 * 24 * 7 // 1 Week
+
+    /* ??? */
     // pushPlugin: true,
   }
 }
@@ -58,9 +70,39 @@ Create `experiments/index.js` to define all available experiments:
 ```js
 import backgroundColor from './background-color'
 
-export default [
-  backgroundColor
-]
+export default {
+  /* Define experiment list */
+  experiments: [ backgroundColor ]
+}
+```
+
+Extended (optional options) are:
+
+```js
+export default {
+  /* Callback that is called when async-hide is initialized. */
+  onGoogleOptimizeInit,
+
+  /* Callback that is called when async-hide is ready. Usually you want to
+  remove your 'async-hide' class from body here. */
+  onGoogleOptimizeReady,
+
+  /* Timeout when onGoogleOptimizeReady is triggered, if not triggered
+  successfully before. */
+  asyncHideTimeout: 4000,
+
+  /* Ship pre-rendered page with hide-async css class in body? */
+  ssrShipWithAsyncHide: true,
+
+  /* Disable cookies during development */
+  devResetCookie: false,
+
+  /* List of experiments */
+  experiments: [
+    carouselEnabled,
+    demoExperiment
+  ]
+}
 ```
 
 ### Creating an experiment
@@ -284,4 +326,3 @@ git push origin --tags
 ## License
 
 [MIT License](./LICENSE) - Alibaba Travels Co
-
