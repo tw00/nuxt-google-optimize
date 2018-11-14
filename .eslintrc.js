@@ -1,3 +1,21 @@
+if ( __dirname !== process.env.PWD ) {
+  /* HACK: Loading module via import - disable linter */
+  module.exports = {
+    'env': {
+      'browser': true,
+      'node': true,
+    },
+    'rules': {
+      'no-console': 0
+    },
+    'extends': 'eslint:recommended',
+    'parserOptions': {
+      'sourceType': 'module'
+    }
+  };
+  return;
+}
+
 module.exports = {
   root: true,
   parserOptions: {

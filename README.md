@@ -221,6 +221,45 @@ import './styles.scss'
 }
 ```
 
+## Helper
+
+Can be used in ~/experiments/index.js. Import with:
+
+```javascript
+import {
+  devForceNoExperiment,
+  devForceExperimentAndVariant,
+  devNoCookie } from 'nuxt-google-optimize/helper'
+```
+
+### devNoCookie
+
+Disables Cookies. Syntax:
+```javascript
+devNoCookie(config)
+```
+
+### devForceNoExperiment
+
+Disable all experiments. Syntax:
+```javascript
+devForceNoExperiment(config)
+```
+
+### devForceExperimentAndVariant
+
+Force experiment and variant. Syntax:
+```javascript
+devForceExperimentAndVariant(config, expName, variantIndex, sectionIndex = 0)
+```
+
+### devForceExperiment
+
+Force experiment. Syntax:
+```javascript
+devForceExperiment(config, expName)
+```
+
 ## Development
 
 - Clone this repository
